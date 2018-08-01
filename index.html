@@ -6,13 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Taiji</title>
   <style>
+
+    @keyframes spin{
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
     .taiji{
       width: 100px;
       height: 50px;
       border: 1px solid black;
       border-bottom: 50px solid black;
       border-radius: 100%;
-      position: relative;  
+      position: relative;
+      animation-duration: 3s;
+      animation-name: spin;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;  
     }
     .taiji::before{
       content: "";
